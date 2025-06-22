@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- <script src="./dreact.js"></script> -->
+    <script src="./dreact2.js"></script>
+    <script>
+        render(
+            createElement(
+                'div', 
+                null, 
+                createElement(
+                    'h1', 
+                    null, 
+                    'Hello World!'
+                ), 
+                createElement(
+                    'p', 
+                    null, 
+                    'This is a paragraph.'
+                )),
+                document.getElementById('root')
+            )
+        // setTimeout(() => {
+        //     element = createElement('div', null, createElement('h1', null, 'Update Hello World!'));
+        //     render(element, document.getElementById('root'))
+        // }, 200)
+        /*
+        render(
+            createElement(function () {
+                const [count, setCount] = useState(1);
+                return (
+                    createElement(
+                        'h1',
+                        {
+                            class: "bububu",
+                            onClick() {
+                                setCount(c => c + 1)
+                            }
+                        },
+                        `Count: ${count}`
+                    )
+                )
+            }),
+            document.getElementById('root')
+        );
+        */
+        /*
+        // ----------------- 使用 -----------------
+        const APPS = () => {
+            const [state, setState] = useState(1)
+
+            return (
+                <h1 class="bububu" onClick={() => setState(c => c + 1)}>
+                    Count: {state}
+                </h1>
+            )
+        }
+        const APPP = () => {
+            const [state, setState] = useState(1)
+
+            return (
+                <h1 class={state === 2 ? "sss" : ""} onClick={() => setState(c => c + 1)}>
+                    Countsss: {state}
+                </h1>
+            )
+        }
+        const APP = ()=>{
+            return (
+                <div>
+                    <APPS />
+                    <APPP />
+                </div>
+            )
+        }
+        render(<APP />, document.getElementById('root'));
+        */
+    </script>
+</body>
+</html>
